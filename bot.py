@@ -117,7 +117,7 @@ def leave(bot, message):
 
 @bot.on_message(filters.command('id'))
 def command1(bot, message):
-    message.reply_text("ඔයාගෙ Telegram id එක = {message.from_user.id}")
+    message.reply_text("ඔයාගෙ Telegram id එක = {update.from_user.id}")
 
 #Ban user forever
 @bot.on_message(filters.command('ban') & filters.group)
