@@ -103,6 +103,10 @@ def command3(bot, message):
     bot.send_photo(message.chat.id, "https://images.app.goo.gl/shMpXiY6hz2ARpP9A")
     bot.send_photo(message.chat.id, "https://images.app.goo.gl/i6HTzCEyCWcS5e947")
     
+@bot.message_handler(commands=["id"])
+def send_welcome(message):
+  bot.reply_to(message, f"ඔයාගෙ Telegram id එක = {message.from_user.id}")
+    
 
 @bot.on_message(filters.text)
 def delete_text(bot, message):
