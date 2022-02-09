@@ -115,9 +115,9 @@ def leave(bot, message):
     bot.send_message(message.chat.id, "Bye! I am leaving this chat.")
     bot.leave_chat(message.chat.id)
 
- @bot.message_handler(commands=["id"])
-def send_message(message):
-  bot.reply_to(message, f"ඔයාගෙ Telegram id එක = {message.from_user.id}")
+@bot.on_message(filters.command('id'))
+def command1(bot, message):
+    message.reply_text("ඔයාගෙ Telegram id එක = {message.from_user.id}")
 
 #Ban user forever
 @bot.on_message(filters.command('ban') & filters.group)
