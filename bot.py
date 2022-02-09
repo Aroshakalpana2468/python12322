@@ -25,7 +25,6 @@ START_MESSAGE_BUTTONS = [
 
 ]
 
-
 @bot.on_message(filters.command('start') & filters.private)
 def start(bot, message):
    text = START_MESSAGE
